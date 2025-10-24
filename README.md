@@ -1,4 +1,4 @@
-\# 🧩 Proyecto de Inventario
+\🧩 Proyecto de Inventario
 
 
 
