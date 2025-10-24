@@ -1,0 +1,61 @@
+HELP.md
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+target/
+build/
+out/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.properties
+.mvn/wrapper/MavenWrapperDownloader.java
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+# Evitar subir credenciales o configuraciones locales
+src/main/resources/application.properties
+src/main/resources/application.yml
+.env
+*.env
+
+test-output/
+surefire-reports/
+jacoco.exec
+
+logs/
+*.log
+*.pid
+*.seed
+*.key
+*.crt
