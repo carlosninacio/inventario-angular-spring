@@ -29,7 +29,7 @@ Dentro del backend (`/inventarios/src/main/resources/application.properties`), c
 # ===============================
 # = CONFIGURACIÓN DE LA BASE DE DATOS
 # ===============================
-spring.datasource.url=jdbc:mysql://localhost:3306/inventario_db?useSSL=false&serverTimezone=UTC
+spring.datasource.url=jdbc:mysql://localhost:3306/inventario_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contraseña
 
