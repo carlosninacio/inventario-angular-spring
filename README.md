@@ -1,86 +1,96 @@
-\🧩 Proyecto de Inventario
+# 🧩 Proyecto de Inventario
 
+Este proyecto es una aplicación completa de **gestión de inventarios** desarrollada con:
 
+- ⚙️ **Backend:** Spring Boot (Java)
+- 💻 **Frontend:** Angular
+- 🗄️ **Base de datos:** MySQL (almacenada localmente en la carpeta `/database`)
 
-Este proyecto es una aplicación completa de \*\*gestión de inventarios\*\* desarrollada con:
+---
 
+## 🗂️ Estructura del proyecto
 
+```
+📦 proyecto-inventario/
+├── 📁 inventario-app/     → Frontend (Angular)
+├── 📁 inventarios/        → Backend (Spring Boot)
+└── 📁 database/           → Base de datos local (inventario_db)
+```
 
-\- \*\*Backend:\*\* Spring Boot (Java)
+---
 
-\- \*\*Frontend:\*\* Angular
+## 🧠 Base de datos
 
-\- \*\*Base de datos:\*\* MySQL (almacenada localmente en la carpeta `/database`)
+El proyecto usa una base de datos llamada **`inventario_db`** almacenada en la carpeta `/database`.
 
+Dentro del backend (`/inventarios/src/main/resources/application.properties`), crea este archivo y agrega:
 
+```properties
+# ===============================
+# = CONFIGURACIÓN DE LA BASE DE DATOS
+# ===============================
+spring.datasource.url=jdbc:mysql://localhost:3306/inventario_db?useSSL=false&serverTimezone=UTC
+spring.datasource.username=tu_usuario
+spring.datasource.password=tu_contraseña
 
-\### Base de datos
-
-El proyecto usa una base de datos llamada \*\*`inventario\_db`\*\* almacenada en la carpeta `/database`.
-
-
-
-Dentro del backend (/inventarios/src/main/resources/application.properties), crea este archivo y agrega:
-
-
-
-\# ===============================
-
-\# = CONFIGURACIÓN DE LA BASE DE DATOS
-
-\# ===============================
-
-spring.datasource.url=jdbc:mysql://localhost:3306/inventario\_db?useSSL=false\&serverTimezone=UTC
-
-spring.datasource.username=tu\_usuario
-
-spring.datasource.password=tu\_contraseña
-
-
-
-\# ===============================
-
-\# = CONFIGURACIÓN DE JPA / HIBERNATE
-
-\# ===============================
-
+# ===============================
+# = CONFIGURACIÓN DE JPA / HIBERNATE
+# ===============================
 spring.jpa.hibernate.ddl-auto=update
-
 spring.jpa.show-sql=true
-
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
-
-
-\# ===============================
-
-\# = CONFIGURACIÓN DEL SERVIDOR
-
-\# ===============================
-
+# ===============================
+# = CONFIGURACIÓN DEL SERVIDOR
+# ===============================
 server.port=8080
-
 spring.application.name=inventarios
+```
 
+> 💡 **Nota:** Si usas los datos ficticios incluidos, asegúrate de importar el archivo de la carpeta `/database` en tu servidor MySQL antes de ejecutar el backend.
 
+---
 
-Desde la carpeta inventarios/ ejecutar:
+## 🚀 Ejecución del proyecto
 
+### 🔹 Backend (Spring Boot)
 
+Desde la carpeta **`inventarios/`**, ejecutar:
 
+```bash
 mvn spring-boot:run
+```
 
+Esto iniciará el servidor de Spring Boot en:  
+👉 `http://localhost:8080`
 
+---
 
-Esto iniciará el servidor de Spring Boot
+### 🔹 Frontend (Angular)
 
+Desde la carpeta **`inventario-app/`**, ejecutar:
 
-
-Desde la carpeta inventario-app/ ejecutar:
-
+```bash
 npm install
-
 ng serve -o
+```
 
+Esto iniciará el servidor del frontend en:  
+👉 `http://localhost:4200`
 
+---
 
+## 🧾 Requisitos previos
+
+- ☕ **Java 17+**
+- 🧱 **Maven 3.9+**
+- 🐬 **MySQL Server**
+- 🅰️ **Node.js 18+ y Angular CLI**
+
+---
+
+## ✨ Autor
+
+**Carlos Ramírez**  
+📧 Proyecto académico / de práctica personal  
+📘 Frontend y Backend desarrollados con fines de aprendizaje y mejora profesional.
